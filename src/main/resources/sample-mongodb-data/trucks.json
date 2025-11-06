@@ -1,0 +1,82 @@
+[
+  {
+    "truckNumber": "MH12AB1234",
+    "type": "Container",
+    "capacityTons": 20,
+    "ownerCompany": "Penske Logistics",
+    "currentCity": "Hyderabad",
+    "available": true
+  },
+  {
+    "truckNumber": "DL05CD5678",
+    "type": "Flatbed",
+    "capacityTons": 25,
+    "ownerCompany": "Ryder Systems",
+    "currentCity": "Delhi",
+    "available": false
+  },
+  {
+    "truckNumber": "KA09EF9012",
+    "type": "Refrigerated",
+    "capacityTons": 18,
+    "ownerCompany": "VRL Logistics",
+    "currentCity": "Bangalore",
+    "available": true
+  },
+  {
+    "truckNumber": "GJ18GH3456",
+    "type": "Container",
+    "capacityTons": 30,
+    "ownerCompany": "Blue Dart Transport",
+    "currentCity": "Ahmedabad",
+    "available": false
+  },
+  {
+    "truckNumber": "TN22IJ7890",
+    "type": "Tanker",
+    "capacityTons": 28,
+    "ownerCompany": "GATI Ltd",
+    "currentCity": "Chennai",
+    "available": true
+  },
+  {
+    "truckNumber": "RJ14KL4321",
+    "type": "Open Truck",
+    "capacityTons": 22,
+    "ownerCompany": "Safexpress",
+    "currentCity": "Jaipur",
+    "available": true
+  },
+  {
+    "truckNumber": "WB20MN8765",
+    "type": "Flatbed",
+    "capacityTons": 26,
+    "ownerCompany": "AllCargo Logistics",
+    "currentCity": "Kolkata",
+    "available": false
+  },
+  {
+    "truckNumber": "UP16PQ3456",
+    "type": "Container",
+    "capacityTons": 24,
+    "ownerCompany": "Mahindra Logistics",
+    "currentCity": "Noida",
+    "available": true
+  },
+  {
+    "truckNumber": "AP28RS6789",
+    "type": "Refrigerated",
+    "capacityTons": 16,
+    "ownerCompany": "TCI Express",
+    "currentCity": "Vijayawada",
+    "available": false
+  },
+  {
+    "truckNumber": "MP09TU1122",
+    "type": "Tanker",
+    "capacityTons": 32,
+    "ownerCompany": "Delhivery Freight",
+    "currentCity": "Indore",
+    "available": true
+  }
+]

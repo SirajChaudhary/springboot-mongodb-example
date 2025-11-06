@@ -1,0 +1,21 @@
+Importing Sample Data Using MongoDB Compass
+
+If the database truck_lease_service_db does not exist yet:
+    1. Open MongoDB Compass.
+    2. Click “+ Create Database” in the left sidebar.
+    3. Enter:
+        1. Database name: truck_lease_service_db
+        2. Collection name: trucks (you can start with this one)
+    4. Click Create Database.
+    5. Then, open the trucks collection → click Import Data → choose your trucks.json file.
+    6. After that, create another collection leaseContracts and import leaseContracts.json.
+
+
+
+--------------------------- OR ---------------------------
+
+
+When Using mongoimport Command
+If you use the CLI command:
+mongoimport --db truck_lease_service_db --collection trucks --file src/main/resources/sample-mongodb-data/trucks.json --jsonArray
+mongoimport --db truck_lease_service_db --collection leaseContracts --file ssrc/main/resources/ample-mongodb-data/leaseContracts.json --jsonArray

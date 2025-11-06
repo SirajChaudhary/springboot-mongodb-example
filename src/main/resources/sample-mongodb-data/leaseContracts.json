@@ -1,0 +1,52 @@
+[
+  {
+    "truckNumber": "MH12AB1234",
+    "lesseeName": "Walmart",
+    "originCity": "Hyderabad",
+    "destinationCity": "Bangalore",
+    "leaseAmount": 85000,
+    "startDate": "2025-10-01",
+    "endDate": "2025-10-10",
+    "status": "ACTIVE"
+  },
+  {
+    "truckNumber": "DL05CD5678",
+    "lesseeName": "Dmart",
+    "originCity": "Delhi",
+    "destinationCity": "Jaipur",
+    "leaseAmount": 65000,
+    "startDate": "2025-09-20",
+    "endDate": "2025-09-25",
+    "status": "COMPLETED"
+  },
+  {
+    "truckNumber": "GJ18GH3456",
+    "lesseeName": "BigBasket",
+    "originCity": "Ahmedabad",
+    "destinationCity": "Mumbai",
+    "leaseAmount": 92000,
+    "startDate": "2025-10-12",
+    "endDate": "2025-10-18",
+    "status": "ACTIVE"
+  },
+  {
+    "truckNumber": "WB20MN8765",
+    "lesseeName": "Flipkart",
+    "originCity": "Kolkata",
+    "destinationCity": "Patna",
+    "leaseAmount": 78000,
+    "startDate": "2025-09-15",
+    "endDate": "2025-09-20",
+    "status": "COMPLETED"
+  },
+  {
+    "truckNumber": "AP28RS6789",
+    "lesseeName": "Reliance Retail",
+    "originCity": "Vijayawada",
+    "destinationCity": "Chennai",
+    "leaseAmount": 72000,
+    "startDate": "2025-10-05",
+    "endDate": "2025-10-09",
+    "status": "ACTIVE"
+  }
+]

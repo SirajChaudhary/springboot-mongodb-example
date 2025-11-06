@@ -1,0 +1,1673 @@
+{
+	"info": {
+		"_postman_id": "6b2c33d7-020f-4fa9-97b9-efb0c17ed19b",
+		"name": "Truck Lease Service",
+		"description": "Postman collection for all Truck and LeaseContract APIs.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Truck APIs",
+			"item": [
+				{
+					"name": "Create Truck",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"truckNumber\": \"MH26AB1010\",\n    \"type\": \"Container\",\n    \"capacityTons\": 16.5,\n    \"ownerCompany\": \"Penske Logistics\",\n    \"currentCity\": \"Nanded\",\n    \"available\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/trucks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Truck",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"truckNumber\": \"MH26AB1010\",\n    \"type\": \"Container\",\n    \"capacityTons\": 16.5,\n    \"ownerCompany\": \"Penske Logistics\",\n    \"currentCity\": \"Nanded\",\n    \"available\": true\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/trucks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:25:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"69074dc897a3d1695679173a\",\n    \"truckNumber\": \"MH26AB1010\",\n    \"type\": \"Container\",\n    \"capacityTons\": 16.5,\n    \"ownerCompany\": \"Penske Logistics\",\n    \"currentCity\": \"Nanded\",\n    \"available\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Trucks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Trucks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:26:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074489361f42724f0cd080\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"type\": \"Container\",\n        \"capacityTons\": 20,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Hyderabad\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd081\",\n        \"truckNumber\": \"DL05CD5678\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 25,\n        \"ownerCompany\": \"Ryder Systems\",\n        \"currentCity\": \"Delhi\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd082\",\n        \"truckNumber\": \"KA09EF9012\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 18,\n        \"ownerCompany\": \"VRL Logistics\",\n        \"currentCity\": \"Bangalore\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd083\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 30,\n        \"ownerCompany\": \"Blue Dart Transport\",\n        \"currentCity\": \"Ahmedabad\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd084\",\n        \"truckNumber\": \"TN22IJ7890\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 28,\n        \"ownerCompany\": \"GATI Ltd\",\n        \"currentCity\": \"Chennai\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd085\",\n        \"truckNumber\": \"RJ14KL4321\",\n        \"type\": \"Open Truck\",\n        \"capacityTons\": 22,\n        \"ownerCompany\": \"Safexpress\",\n        \"currentCity\": \"Jaipur\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd086\",\n        \"truckNumber\": \"WB20MN8765\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 26,\n        \"ownerCompany\": \"AllCargo Logistics\",\n        \"currentCity\": \"Kolkata\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd087\",\n        \"truckNumber\": \"UP16PQ3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 24,\n        \"ownerCompany\": \"Mahindra Logistics\",\n        \"currentCity\": \"Noida\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd088\",\n        \"truckNumber\": \"AP28RS6789\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 16,\n        \"ownerCompany\": \"TCI Express\",\n        \"currentCity\": \"Vijayawada\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd089\",\n        \"truckNumber\": \"MP09TU1122\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 32,\n        \"ownerCompany\": \"Delhivery Freight\",\n        \"currentCity\": \"Indore\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074dc897a3d1695679173a\",\n        \"truckNumber\": \"MH26AB1010\",\n        \"type\": \"Container\",\n        \"capacityTons\": 16.5,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Nanded\",\n        \"available\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Truck By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Truck By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/69074dc897a3d1695679173a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"69074dc897a3d1695679173a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:26:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"69074dc897a3d1695679173a\",\n    \"truckNumber\": \"MH26AB1010\",\n    \"type\": \"Container\",\n    \"capacityTons\": 16.5,\n    \"ownerCompany\": \"Penske Logistics\",\n    \"currentCity\": \"Nanded\",\n    \"available\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Truck",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Truck",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/69074d5197a3d16956791739",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"69074d5197a3d16956791739"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:25:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find Available Trucks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/available?city=Hyderabad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"available"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Hyderabad"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Available Trucks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/available?city=Hyderabad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"available"
+									],
+									"query": [
+										{
+											"key": "city",
+											"value": "Hyderabad"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:26:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074489361f42724f0cd080\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"type\": \"Container\",\n        \"capacityTons\": 20,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Hyderabad\",\n        \"available\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Trucks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/search?keyword=Flatbed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "Flatbed"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Trucks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/search?keyword=MH26AB1010",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "MH26AB1010"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:28:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074dc897a3d1695679173a\",\n        \"truckNumber\": \"MH26AB1010\",\n        \"type\": \"Container\",\n        \"capacityTons\": 16.5,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Nanded\",\n        \"available\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Sort Trucks by Capacity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/sort?desc=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"sort"
+							],
+							"query": [
+								{
+									"key": "desc",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sort Trucks by Capacity",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/sort?desc=true",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"sort"
+									],
+									"query": [
+										{
+											"key": "desc",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:28:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074489361f42724f0cd089\",\n        \"truckNumber\": \"MP09TU1122\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 32,\n        \"ownerCompany\": \"Delhivery Freight\",\n        \"currentCity\": \"Indore\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd083\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 30,\n        \"ownerCompany\": \"Blue Dart Transport\",\n        \"currentCity\": \"Ahmedabad\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd084\",\n        \"truckNumber\": \"TN22IJ7890\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 28,\n        \"ownerCompany\": \"GATI Ltd\",\n        \"currentCity\": \"Chennai\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd086\",\n        \"truckNumber\": \"WB20MN8765\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 26,\n        \"ownerCompany\": \"AllCargo Logistics\",\n        \"currentCity\": \"Kolkata\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd081\",\n        \"truckNumber\": \"DL05CD5678\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 25,\n        \"ownerCompany\": \"Ryder Systems\",\n        \"currentCity\": \"Delhi\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd087\",\n        \"truckNumber\": \"UP16PQ3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 24,\n        \"ownerCompany\": \"Mahindra Logistics\",\n        \"currentCity\": \"Noida\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd085\",\n        \"truckNumber\": \"RJ14KL4321\",\n        \"type\": \"Open Truck\",\n        \"capacityTons\": 22,\n        \"ownerCompany\": \"Safexpress\",\n        \"currentCity\": \"Jaipur\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd080\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"type\": \"Container\",\n        \"capacityTons\": 20,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Hyderabad\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd082\",\n        \"truckNumber\": \"KA09EF9012\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 18,\n        \"ownerCompany\": \"VRL Logistics\",\n        \"currentCity\": \"Bangalore\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074dc897a3d1695679173a\",\n        \"truckNumber\": \"MH26AB1010\",\n        \"type\": \"Container\",\n        \"capacityTons\": 16.5,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Nanded\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd088\",\n        \"truckNumber\": \"AP28RS6789\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 16,\n        \"ownerCompany\": \"TCI Express\",\n        \"currentCity\": \"Vijayawada\",\n        \"available\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Paginate Trucks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/page?page=1&size=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Paginate Trucks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/page?page=1&size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"page"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:28:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074489361f42724f0cd080\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"type\": \"Container\",\n        \"capacityTons\": 20,\n        \"ownerCompany\": \"Penske Logistics\",\n        \"currentCity\": \"Hyderabad\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd081\",\n        \"truckNumber\": \"DL05CD5678\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 25,\n        \"ownerCompany\": \"Ryder Systems\",\n        \"currentCity\": \"Delhi\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd082\",\n        \"truckNumber\": \"KA09EF9012\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 18,\n        \"ownerCompany\": \"VRL Logistics\",\n        \"currentCity\": \"Bangalore\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd083\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 30,\n        \"ownerCompany\": \"Blue Dart Transport\",\n        \"currentCity\": \"Ahmedabad\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd084\",\n        \"truckNumber\": \"TN22IJ7890\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 28,\n        \"ownerCompany\": \"GATI Ltd\",\n        \"currentCity\": \"Chennai\",\n        \"available\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Projected Trucks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/projected",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"projected"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Projected Trucks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/projected",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"projected"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:29:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074489361f42724f0cd080\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"type\": \"Container\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd081\",\n        \"truckNumber\": \"DL05CD5678\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd082\",\n        \"truckNumber\": \"KA09EF9012\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd083\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd084\",\n        \"truckNumber\": \"TN22IJ7890\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd085\",\n        \"truckNumber\": \"RJ14KL4321\",\n        \"type\": \"Open Truck\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd086\",\n        \"truckNumber\": \"WB20MN8765\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd087\",\n        \"truckNumber\": \"UP16PQ3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd088\",\n        \"truckNumber\": \"AP28RS6789\",\n        \"type\": \"Refrigerated\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd089\",\n        \"truckNumber\": \"MP09TU1122\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    },\n    {\n        \"id\": \"69074dc897a3d1695679173a\",\n        \"truckNumber\": \"MH26AB1010\",\n        \"type\": \"Container\",\n        \"capacityTons\": 0,\n        \"ownerCompany\": null,\n        \"currentCity\": null,\n        \"available\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Trucks Above Capacity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/capacity?minTons=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"capacity"
+							],
+							"query": [
+								{
+									"key": "minTons",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Trucks Above Capacity",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/capacity?minTons=25",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"capacity"
+									],
+									"query": [
+										{
+											"key": "minTons",
+											"value": "25"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:30:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"69074489361f42724f0cd083\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"type\": \"Container\",\n        \"capacityTons\": 30,\n        \"ownerCompany\": \"Blue Dart Transport\",\n        \"currentCity\": \"Ahmedabad\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd084\",\n        \"truckNumber\": \"TN22IJ7890\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 28,\n        \"ownerCompany\": \"GATI Ltd\",\n        \"currentCity\": \"Chennai\",\n        \"available\": true\n    },\n    {\n        \"id\": \"69074489361f42724f0cd086\",\n        \"truckNumber\": \"WB20MN8765\",\n        \"type\": \"Flatbed\",\n        \"capacityTons\": 26,\n        \"ownerCompany\": \"AllCargo Logistics\",\n        \"currentCity\": \"Kolkata\",\n        \"available\": false\n    },\n    {\n        \"id\": \"69074489361f42724f0cd089\",\n        \"truckNumber\": \"MP09TU1122\",\n        \"type\": \"Tanker\",\n        \"capacityTons\": 32,\n        \"ownerCompany\": \"Delhivery Freight\",\n        \"currentCity\": \"Indore\",\n        \"available\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Truck City",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/MH12AB1234/city?city=Bangalore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"MH12AB1234",
+								"city"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Bangalore"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Truck City",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/MH12AB1234/city?city=Bangalore",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"MH12AB1234",
+										"city"
+									],
+									"query": [
+										{
+											"key": "city",
+											"value": "Bangalore"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:30:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Update Truck City",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/MH12AB1234/city?city=Hyderabad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"MH12AB1234",
+										"city"
+									],
+									"query": [
+										{
+											"key": "city",
+											"value": "Hyderabad"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:32:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Truck Availability",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/MH12AB1234/availability?available=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"MH12AB1234",
+								"availability"
+							],
+							"query": [
+								{
+									"key": "available",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Truck Availability",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/MH12AB1234/availability?available=false",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"MH12AB1234",
+										"availability"
+									],
+									"query": [
+										{
+											"key": "available",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:31:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Group Trucks by City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/trucks/groupByCity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trucks",
+								"groupByCity"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Group Trucks by City",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/trucks/groupByCity",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"trucks",
+										"groupByCity"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:31:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"Kolkata\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 26\n    },\n    {\n        \"_id\": \"Ahmedabad\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 30\n    },\n    {\n        \"_id\": \"Bangalore\",\n        \"truckCount\": 2,\n        \"totalCapacity\": 38\n    },\n    {\n        \"_id\": \"Delhi\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 25\n    },\n    {\n        \"_id\": \"Noida\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 24\n    },\n    {\n        \"_id\": \"Jaipur\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 22\n    },\n    {\n        \"_id\": \"Chennai\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 28\n    },\n    {\n        \"_id\": \"Indore\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 32\n    },\n    {\n        \"_id\": \"Nanded\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 16.5\n    },\n    {\n        \"_id\": \"Vijayawada\",\n        \"truckCount\": 1,\n        \"totalCapacity\": 16\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lease Contract APIs",
+			"item": [
+				{
+					"name": "Create Lease Contract",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"truckNumber\": \"MH12AB1234\",\n    \"lesseeName\": \"Walmart\",\n    \"originCity\": \"Hyderabad\",\n    \"destinationCity\": \"Bangalore\",\n    \"leaseAmount\": 85000,\n    \"startDate\": \"2025-10-01\",\n    \"endDate\": \"2025-10-10\",\n    \"status\": \"ACTIVE\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/contracts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Lease Contract",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"truckNumber\": \"MH12AB1234\",\n    \"lesseeName\": \"Walmart\",\n    \"originCity\": \"Hyderabad\",\n    \"destinationCity\": \"Bangalore\",\n    \"leaseAmount\": 85000,\n    \"startDate\": \"2025-10-01\",\n    \"endDate\": \"2025-10-10\",\n    \"status\": \"ACTIVE\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/contracts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:32:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"69074f6297a3d1695679173b\",\n    \"truckNumber\": \"MH12AB1234\",\n    \"lesseeName\": \"Walmart\",\n    \"originCity\": \"Hyderabad\",\n    \"destinationCity\": \"Bangalore\",\n    \"leaseAmount\": 85000,\n    \"startDate\": \"2025-10-01\",\n    \"endDate\": \"2025-10-10\",\n    \"status\": \"ACTIVE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Lease Contracts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Lease Contracts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:32:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"690744ac361f42724f0cd08b\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"lesseeName\": \"Walmart\",\n        \"originCity\": \"Hyderabad\",\n        \"destinationCity\": \"Bangalore\",\n        \"leaseAmount\": 85000,\n        \"startDate\": \"2025-10-01\",\n        \"endDate\": \"2025-10-10\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"690744ac361f42724f0cd08c\",\n        \"truckNumber\": \"DL05CD5678\",\n        \"lesseeName\": \"Dmart\",\n        \"originCity\": \"Delhi\",\n        \"destinationCity\": \"Jaipur\",\n        \"leaseAmount\": 65000,\n        \"startDate\": \"2025-09-20\",\n        \"endDate\": \"2025-09-25\",\n        \"status\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"690744ac361f42724f0cd08d\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"lesseeName\": \"BigBasket\",\n        \"originCity\": \"Ahmedabad\",\n        \"destinationCity\": \"Mumbai\",\n        \"leaseAmount\": 92000,\n        \"startDate\": \"2025-10-12\",\n        \"endDate\": \"2025-10-18\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"690744ac361f42724f0cd08e\",\n        \"truckNumber\": \"WB20MN8765\",\n        \"lesseeName\": \"Flipkart\",\n        \"originCity\": \"Kolkata\",\n        \"destinationCity\": \"Patna\",\n        \"leaseAmount\": 78000,\n        \"startDate\": \"2025-09-15\",\n        \"endDate\": \"2025-09-20\",\n        \"status\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"690744ac361f42724f0cd08f\",\n        \"truckNumber\": \"AP28RS6789\",\n        \"lesseeName\": \"Reliance Retail\",\n        \"originCity\": \"Vijayawada\",\n        \"destinationCity\": \"Chennai\",\n        \"leaseAmount\": 72000,\n        \"startDate\": \"2025-10-05\",\n        \"endDate\": \"2025-10-09\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"69074f6297a3d1695679173b\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"lesseeName\": \"Walmart\",\n        \"originCity\": \"Hyderabad\",\n        \"destinationCity\": \"Bangalore\",\n        \"leaseAmount\": 85000,\n        \"startDate\": \"2025-10-01\",\n        \"endDate\": \"2025-10-10\",\n        \"status\": \"ACTIVE\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find by Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts/status?status=ACTIVE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts",
+								"status"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find by Status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts/status?status=ACTIVE",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts",
+										"status"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "ACTIVE"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:33:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"690744ac361f42724f0cd08b\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"lesseeName\": \"Walmart\",\n        \"originCity\": \"Hyderabad\",\n        \"destinationCity\": \"Bangalore\",\n        \"leaseAmount\": 85000,\n        \"startDate\": \"2025-10-01\",\n        \"endDate\": \"2025-10-10\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"690744ac361f42724f0cd08d\",\n        \"truckNumber\": \"GJ18GH3456\",\n        \"lesseeName\": \"BigBasket\",\n        \"originCity\": \"Ahmedabad\",\n        \"destinationCity\": \"Mumbai\",\n        \"leaseAmount\": 92000,\n        \"startDate\": \"2025-10-12\",\n        \"endDate\": \"2025-10-18\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"690744ac361f42724f0cd08f\",\n        \"truckNumber\": \"AP28RS6789\",\n        \"lesseeName\": \"Reliance Retail\",\n        \"originCity\": \"Vijayawada\",\n        \"destinationCity\": \"Chennai\",\n        \"leaseAmount\": 72000,\n        \"startDate\": \"2025-10-05\",\n        \"endDate\": \"2025-10-09\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"69074f6297a3d1695679173b\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"lesseeName\": \"Walmart\",\n        \"originCity\": \"Hyderabad\",\n        \"destinationCity\": \"Bangalore\",\n        \"leaseAmount\": 85000,\n        \"startDate\": \"2025-10-01\",\n        \"endDate\": \"2025-10-10\",\n        \"status\": \"ACTIVE\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Contracts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts/search?keyword=Walmart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "Walmart"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Contracts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts/search?keyword=Walmart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "Walmart"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:33:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"690744ac361f42724f0cd08b\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"lesseeName\": \"Walmart\",\n        \"originCity\": \"Hyderabad\",\n        \"destinationCity\": \"Bangalore\",\n        \"leaseAmount\": 85000,\n        \"startDate\": \"2025-10-01\",\n        \"endDate\": \"2025-10-10\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"69074f6297a3d1695679173b\",\n        \"truckNumber\": \"MH12AB1234\",\n        \"lesseeName\": \"Walmart\",\n        \"originCity\": \"Hyderabad\",\n        \"destinationCity\": \"Bangalore\",\n        \"leaseAmount\": 85000,\n        \"startDate\": \"2025-10-01\",\n        \"endDate\": \"2025-10-10\",\n        \"status\": \"ACTIVE\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts/{id}/status?status=COMPLETED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts",
+								"{id}",
+								"status"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "COMPLETED"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Status",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts/69074f6297a3d1695679173b/status?status=COMPLETED",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts",
+										"69074f6297a3d1695679173b",
+										"status"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "COMPLETED"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:34:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Lease Amount",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts/{id}/amount?amount=95000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts",
+								"{id}",
+								"amount"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "95000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Lease Amount",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts/690744ac361f42724f0cd08b/amount?amount=95000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts",
+										"690744ac361f42724f0cd08b",
+										"amount"
+									],
+									"query": [
+										{
+											"key": "amount",
+											"value": "95000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:37:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Total Lease by Origin City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts/totalLeaseByOriginCity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts",
+								"totalLeaseByOriginCity"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Total Lease by Origin City",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts/totalLeaseByOriginCity",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts",
+										"totalLeaseByOriginCity"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:37:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"Ahmedabad\",\n        \"totalLease\": 95000,\n        \"contractsCount\": 1\n    },\n    {\n        \"_id\": \"Hyderabad\",\n        \"totalLease\": 180000,\n        \"contractsCount\": 2\n    },\n    {\n        \"_id\": \"Delhi\",\n        \"totalLease\": 65000,\n        \"contractsCount\": 1\n    },\n    {\n        \"_id\": \"Vijayawada\",\n        \"totalLease\": 72000,\n        \"contractsCount\": 1\n    },\n    {\n        \"_id\": \"Kolkata\",\n        \"totalLease\": 78000,\n        \"contractsCount\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Activate Lease",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contracts/{id}/activate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contracts",
+								"{id}",
+								"activate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Activate Lease",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/contracts/690744ac361f42724f0cd08c/activate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"contracts",
+										"690744ac361f42724f0cd08c",
+										"activate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Nov 2025 12:38:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
